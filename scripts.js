@@ -36,5 +36,19 @@ console.log(isWeekend("2022-02-09"));
 
 // 4 
 
-
+const person = {
+    fullName: "Sherlock Holmes",
+    address: {
+        street: "Baker Street",
+        city: "London",
+        house: "221b",
+    },
+};
+let json = JSON.stringify(person);
+let parsedPerson = JSON.parse(json);
+const {
+    fullName,
+    address: { street, city, house },
+} = person  ;
+console.log(`Меня зовут  ${fullName}. Я живу в ${city},по адресу: ${street}, ${house}`);
 
